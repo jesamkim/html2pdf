@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Sample files (exclude from repo)
+AWS_Expert_Feedback_Summary.html
+AWS_Expert_Feedback_Summary.pdf
+
+# Test output
+output-*.pdf
+test-*.pdf
+
+# Logs
+*.log
+logs/

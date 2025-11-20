@@ -1,0 +1,32 @@
+{
+  "name": "html2pdf-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for converting HTML to PDF using Puppeteer",
+  "type": "module",
+  "bin": {
+    "html2pdf-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "html",
+    "pdf",
+    "puppeteer",
+    "converter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "puppeteer": "^23.11.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}

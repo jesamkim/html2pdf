@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "html2pdf": {
+      "command": "node",
+      "args": ["/Workshop/html2pdf/dist/index.js"],
+      "description": "HTML to PDF conversion server using Puppeteer"
+    }
+  }
+}
