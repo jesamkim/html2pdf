@@ -22,19 +22,34 @@ npm run build
 
 ## Usage
 
-### As MCP Server
+### Quick Start with Claude Code/Desktop
 
-Add to your MCP client configuration (e.g., Claude Desktop):
+This server is designed to work with **Claude Code** and **Claude Desktop** as an MCP tool.
+
+**📖 For detailed MCP setup and usage instructions, see [MCP_USAGE.md](MCP_USAGE.md)**
+
+### Basic MCP Configuration
+
+Add to your MCP client configuration:
+
+**Claude Code**: `~/.config/claude-code/mcp_config.json`
+**Claude Desktop**: `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 
 ```json
 {
   "mcpServers": {
     "html2pdf": {
       "command": "node",
-      "args": ["/Workshop/html2pdf/dist/index.js"]
+      "args": ["/absolute/path/to/html2pdf/dist/index.js"],
+      "description": "Convert HTML to PDF with browser rendering"
     }
   }
 }
+```
+
+After configuration, restart Claude and ask:
+```
+Claude, convert my-report.html to PDF with 80% scale and A4 format
 ```
 
 ### Available Tool
@@ -80,6 +95,12 @@ Convert HTML to PDF with browser rendering.
 ```bash
 npx tsx test-conversion.ts
 ```
+
+## Documentation
+
+- **[MCP_USAGE.md](MCP_USAGE.md)** - Complete guide for using with Claude Code/Desktop
+- **[REQUIREMENTS.md](REQUIREMENTS.md)** - System requirements and installation
+- **[mcp-config-example.json](mcp-config-example.json)** - Example configuration file
 
 ## Architecture
 
