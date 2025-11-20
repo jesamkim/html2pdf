@@ -16,11 +16,32 @@ npm install
 npm run build
 ```
 
-### 2. Configure MCP Server
+### 2. Add MCP Server
+
+#### Option A: Using Claude Code CLI (Recommended)
+
+The easiest way to add the server globally:
+
+```bash
+cd /path/to/html2pdf
+claude mcp add --transport stdio --scope user html2pdf -- node $(pwd)/dist/index.js
+```
+
+**Scope options**:
+- `--scope user` - Global (all projects) ✅ Recommended
+- `--scope local` - Current project only
+- `--scope project` - Project-wide (for team)
+
+Verify it's added:
+```bash
+claude mcp list
+```
+
+#### Option B: Manual Configuration (Alternative)
 
 Create or edit your MCP configuration file:
 
-**For Claude Code**: `~/.config/claude-code/mcp_config.json`
+**For Claude Code**: `~/.claude.json` (user/global) or `./.claude.json` (project)
 **For Claude Desktop**: `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 
 Add the following configuration:
@@ -39,9 +60,20 @@ Add the following configuration:
 
 **Important**: Replace `/absolute/path/to/html2pdf` with the actual absolute path to your project.
 
-### 3. Restart Claude Code/Desktop
+### 3. Verify Installation
 
-After updating the configuration, restart the application to load the new MCP server.
+Check that the server is running:
+
+```bash
+claude mcp list
+```
+
+You should see:
+```
+html2pdf: node /path/to/html2pdf/dist/index.js - ✓ Connected
+```
+
+If Claude Code is already running, restart it to load the new MCP server.
 
 ## Using the Tool
 
