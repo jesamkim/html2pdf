@@ -147,11 +147,23 @@ The server maintains a reusable browser instance to improve performance for mult
 
 ## Sample Output
 
-Tested with `AWS_Expert_Feedback_Summary.html`:
-- Processing time: 1.5s
-- Output file size: 174.67 KB
-- Format: A4 portrait
-- Full CSS styling preserved
+Sample files included in the repository:
+
+**[sample.html](sample.html)** → **[sample.pdf](sample.pdf)**
+
+Features demonstrated:
+- 📊 Chart.js integration with dynamic data visualization
+- 🇰🇷 Korean + 🇬🇧 English bilingual content
+- ✅ Emoji support (✅ ⚠️ 📈 🎯 💡 etc.)
+- 🎨 Modern CSS styling with gradients and shadows
+- 📱 Responsive tables and grid layouts
+- 💼 Professional business report format
+
+Conversion results:
+- Processing time: 2.3s
+- Output file size: 896.63 KB
+- Format: A4 portrait with 80% scale
+- Full CSS styling and fonts preserved
 
 ## Requirements
 
